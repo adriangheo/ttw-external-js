@@ -1,3 +1,8 @@
+jQuery(function() {
+    console.log("testing external js");
+});
+
+
 // <!-- script for hining checking if each Coaching Certification Program is scheduled (hasn't begun yes)  -->
 // <!-- and hiding the course expand buttons for the ones that have not yet begun -->
 jQuery('input[value="Finish Quiz"]').css("background-color", "#546db4");
