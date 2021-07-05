@@ -53,8 +53,8 @@ jQuery(function() {
                 //jQuery("span:contains(Next Lesson)").parent().first()[0].click();
             } else {
                 console.log("landing from something other than last topic of module (MarkComplete click)");
-                sessionStorage.setItem("landingFromLastTopic", "False");
-                window.open("https://thethirdwave.co/lessons/module-4-psychedelics-neuroplasticity/", "_self");
+                // sessionStorage.setItem("landingFromLastTopic", "False");
+                // window.open("https://thethirdwave.co/lessons/module-4-psychedelics-neuroplasticity/", "_self");
             }
 
             if (firstIncompleteBullet.length == 1) {
