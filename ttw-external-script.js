@@ -36,8 +36,6 @@ jQuery(function() {
                     sessionStorage.setItem("landingFromLastTopic", "True");
                 });
             }
-        } else {
-            console.log("not inside the last topic")
         }
 
 
