@@ -50,7 +50,43 @@ jQuery(function() {
             if (sessionStorage.getItem("landingFromLastTopic") == "True") {
                 console.log("landing from last topic of module, after MarkComplete click");
                 sessionStorage.setItem("landingFromLastTopic", "False");
-                //jQuery("span:contains(Next Lesson)").parent().first()[0].click();
+                //jQuery("span:contains(Next Lesson)").parent().first()[0].click(); //this doesn't work. So I was forced to use to method below
+                if (window.location.href.indexOf("ccp-module-1-introduction") > -1) { //this is actualy the intro
+                    window.open("https://thethirdwave.co/lessons/ccp-m1-setting-the-stage/", "_self");
+                }
+                if (window.location.href.indexOf("ccp-m1-setting-the-stage") > -1) { //this is the actual module 1
+                    window.open("https://thethirdwave.co/lessons/ccp-module-2-the-legal-landscape/", "_self");
+                }
+                if (window.location.href.indexOf("ccp-module-2-the-legal-landscape") > -1) { //this is the actual module 2
+                    window.open("https://thethirdwave.co/lessons/module-3-consciousness-medicines/", "_self");
+                }
+                if (window.location.href.indexOf("module-3-consciousness-medicines") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-4-psychedelics-neuroplasticity/", "_self");
+                }
+                if (window.location.href.indexOf("module-4-psychedelics-neuroplasticity") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-5-an-outcome-based-approach/", "_self");
+                }
+                if (window.location.href.indexOf("module-5-an-outcome-based-approach/") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-6-guidance-facilitation/", "_self");
+                }
+                if (window.location.href.indexOf("module-6-guidance-facilitation") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-7-integration/", "_self");
+                }
+                if (window.location.href.indexOf("module-7-integration") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-8-optimal-well-being/", "_self");
+                }
+                if (window.location.href.indexOf("module-8-optimal-well-being") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-9-purpose-flow-creativity/", "_self");
+                }
+                if (window.location.href.indexOf("module-9-purpose-flow-creativity") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-10-reimagining-leadership/", "_self");
+                }
+                if (window.location.href.indexOf("module-10-reimagining-leadership") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-11-safety-ethics-integrity/", "_self");
+                }
+                if (window.location.href.indexOf("module-11-safety-ethics-integrity") > -1) {
+                    window.open("https://thethirdwave.co/lessons/module-12-from-theory-to-practice/", "_self");
+                }
             } else {
                 console.log("landing from something other than last topic of module (MarkComplete click)");
                 // sessionStorage.setItem("landingFromLastTopic", "False");
