@@ -48,9 +48,9 @@ jQuery(function() {
             var firstIncompleteBullet = currentBoldedModule.closest(".ld-lesson-item-preview").next().find(".ld-status-icon.ld-status-incomplete").first();
 
             if (sessionStorage.getItem("landingFromLastTopic") == "True") {
-                console.log("comming from last topic");
+                console.log("landing from last topic of module, after MarkComplete click");
             } else {
-                console.log("comming from something diferent than last topic");
+                console.log("landing from something other than last topic of module (MarkComplete click)");
             }
 
             if (firstIncompleteBullet.length == 1) {
