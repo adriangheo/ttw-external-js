@@ -27,11 +27,12 @@ jQuery(function() {
     jQuery(".ld-lesson-title").each(function() {
         //the if clause bellow only executes when the user is viewing viewing a Module page, and also IS on a topic title
         if ((jQuery(this).css("font-weight") > 550) && (jQuery(".ld-is-current-item").length != 0)) {
-            console.log("inside the last topic")
+            console.log("inside one of the topics")
 
             // check if there are any topics following the curent one, inside the current module
             // if there aren't (and the if returns true) than the user is curently on the last topic of a module
             if (jQuery('.ld-is-current-item').parent().nextAll().length == 0) {
+                console.log("specificaly, inside the last topic of a module")
                 jQuery('input[value="Mark Complete"]').on("click", function() {
                     sessionStorage.setItem("landingFromLastTopic", "True");
                 });
