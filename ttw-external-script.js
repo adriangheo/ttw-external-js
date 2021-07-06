@@ -52,12 +52,6 @@ hideCppTopics();
 
 //  <!-- script for changing behavior of Next Lesson button and Mark Complete Button button, when the user is inside a Module -->
 //  <!-- note: inside a Module, and not a sub topic -->
-//  <!-- script for changing behavior of Next Lesson button and Mark Complete Button button, when the user is inside a Module -->
-//  <!-- note: inside a Module, and not a sub topic -->
-jQuery(documet).ready() {
-
-}
-
 jQuery(function() {
     jQuery(".ld-lesson-title").each(function() {
         //the if clause bellow only executes when the user is viewing viewing a Module page, and also IS on a topic title
