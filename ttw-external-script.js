@@ -16,7 +16,7 @@ jQuery(function() {
 jQuery(".ld-lesson-item-preview-heading").each(function() {
     var curentHeading = jQuery(this);
     if (curentHeading.find(".ld-icon-calendar").length != 0) {
-        curentHeading.find(".ld-expand-button.ld-button-alternate").css("display", "inline-block");
+        curentHeading.siblings(".ld-expand-button.ld-button-alternate").css("display", "inline-block");
     }
 });
 
