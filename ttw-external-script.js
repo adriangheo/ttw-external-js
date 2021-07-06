@@ -15,12 +15,44 @@ jQuery(function() {
 
 // <!-- script for hining checking if each Coaching Certification Program is scheduled (hasn't begun yes)  -->
 // <!-- and hiding the course expand buttons for the ones that have not yet begun -->
+//start of script for hiding home page link from test pages     
 jQuery(function() {
-    jQuery(".ld-icon-calendar").each(function() {
-        jQuery(this).parents(".ld-lesson-item-preview-heading").siblings(".ld-expand-button").css("display", "none");
-    });
-});
+    console.log("1a");
 
+    function hideCppTopics() {
+        var timesRunV1 = 0;
+
+        console.log("7a");
+        var checkExistV1 = setInterval(function() {
+            timesRunV1 += 1;
+            console.log("8a");
+            if ((jQuery(".ld-icon-calendar").length > 0) == true) { //this line could have been writen shorten. It hasn't for simple readability purposes
+
+                //the setTimeout bellow is conceived to be in case the user's is soooo fast that it literaly doesn't allow time for all the calendar icons to appear
+                //this is why it has a 100 milisecond delay time
+                setTimeout(
+                    //bellow is the 1st argument for setInterval (specifically the funciton to be executet)
+                    function() {
+                        jQuery(".ld-icon-calendar").each(function() {
+                            jQuery(this).parents(".ld-lesson-item-preview-heading").siblings(".ld-expand-button").css("display", "none");
+                        });
+                    },
+                    //bellow is the 2nd argument for setTimout (specifically the interval in miliseconds). So the functio in the first argument will be executed only after the number of millisecods bellow have passed
+                    100
+                );
+                console.log("Exists!");
+                clearInterval(checkExistV1);
+            }
+            //the if clause below is conceived in case the check never finds any .ld-icon-calendar. It's set to 20 seconds (20 x 100 miliseconds). If it reaches this limit (case in which it hasn't found any .ld-icon-calendar element), it will force stop the interval check
+            if (timesRunV1 === 20) {
+                clearInterval(checkExistV1);
+            }
+            console.log("9a");
+        }, 100); // check every 100ms
+    }
+
+    hideCppTopics();
+});
 
 //  <!-- script for changing behavior of Next Lesson button and Mark Complete Button button, when the user is inside a Module -->
 //  <!-- note: inside a Module, and not a sub topic -->
