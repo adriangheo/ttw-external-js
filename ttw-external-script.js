@@ -15,10 +15,13 @@ jQuery(function() {
 // <!-- and hiding the course expand buttons for the ones that have not yet begun -->
 jQuery(function() {
     jQuery(".ld-lesson-item-preview-heading").each(function() {
+        console.log("test1");
         var curentHeading = jQuery(this);
         if (curentHeading.find(".ld-icon-calendar").length == 0) {
+            console.log("test2");
             curentHeading.siblings(".ld-expand-button.ld-button-alternate").css("display", "inline-block");
         }
+        console.log("test3");
     });
 });
 
