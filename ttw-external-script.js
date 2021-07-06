@@ -8,17 +8,20 @@ jQuery(function() {
 jQuery(function() {
     jQuery('input[value="Finish Quiz"]').css("background-color", "#546db4");
     jQuery('input[value="Finish Quiz"]').val('Submit');
-})
+});
 
 
 // <!-- script for hiding checking if each Coaching Certification Program is scheduled (hasn't begun yes)  -->
 // <!-- and hiding the course expand buttons for the ones that have not yet begun -->
-jQuery(".ld-lesson-item-preview-heading").each(function() {
-    var curentHeading = jQuery(this);
-    if (curentHeading.find(".ld-icon-calendar").length != 0) {
-        curentHeading.siblings(".ld-expand-button.ld-button-alternate").css("display", "inline-block");
-    }
+jQuery(function() {
+    jQuery(".ld-lesson-item-preview-heading").each(function() {
+        var curentHeading = jQuery(this);
+        if (curentHeading.find(".ld-icon-calendar").length != 0) {
+            curentHeading.siblings(".ld-expand-button.ld-button-alternate").css("display", "inline-block");
+        }
+    });
 });
+
 
 
 //  <!-- script for changing behavior of Next Lesson button and Mark Complete Button button, when the user is inside a Module -->
