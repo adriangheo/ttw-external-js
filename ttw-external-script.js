@@ -8,6 +8,8 @@ jQuery(function() {
 jQuery(function() {
     jQuery('input[value="Finish Quiz"]').css("background-color", "#546db4");
     jQuery('input[value="Finish Quiz"]').val('Submit');
+    jQuery('input[value="Submit"]').css("background-color", "#546db4");
+    jQuery('input[value="Submit"]').val('Submit');
 });
 
 
