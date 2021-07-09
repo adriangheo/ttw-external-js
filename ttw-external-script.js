@@ -1,5 +1,7 @@
 jQuery(function() {
-    console.log("testing github external js");
+    var date2 = new Date();
+    var dateString2 = date2.toISOString(); 
+    console.log("GitHub ccp external js script - " + dateString2);
 });
 
 
